@@ -71,7 +71,7 @@ public class RechercheWindows extends javax.swing.JFrame {
         tableModel.setRowCount(0);
 
         try {
-            String query = "SELECT * FROM utilisateurs WHERE nom LIKE ? OR prenom LIKE ?";
+            String query = "SELECT * FROM utilisateurs WHERE id LIKE ? OR nom LIKE ?";
             PreparedStatement preparedStatement = conn.prepareStatement(query);
             preparedStatement.setString(1, "%" + searchQuery + "%");
             preparedStatement.setString(2, "%" + searchQuery + "%");
