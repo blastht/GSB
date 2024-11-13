@@ -43,6 +43,7 @@ public class MainWindow extends javax.swing.JFrame {
         ConsulterBTN2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        RechercherBTN1 = new javax.swing.JButton();
 
         UtilAutentifieTxt2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         UtilAutentifieTxt2.setText("Utilisateur authentifié");
@@ -96,6 +97,13 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        RechercherBTN1.setText("Conn");
+        RechercherBTN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RechercherBTN1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -114,7 +122,9 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(ModifierBTN)
                         .addGap(18, 18, 18)
                         .addComponent(RechercherBTN)
-                        .addGap(321, 321, 321))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RechercherBTN1)
+                        .addGap(223, 223, 223))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(332, 332, 332))
@@ -134,10 +144,11 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(ConsulterBTN2)
                     .addComponent(AjouterBTN)
                     .addComponent(ModifierBTN)
-                    .addComponent(RechercherBTN))
-                .addGap(18, 18, 18)
+                    .addComponent(RechercherBTN)
+                    .addComponent(RechercherBTN1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -222,6 +233,13 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void RechercherBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RechercherBTN1ActionPerformed
+        PageConnexionGSB connexion = new PageConnexionGSB();
+        connexion.setVisible(true);
+        // this.dispose();
+        
+    }//GEN-LAST:event_RechercherBTN1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -262,6 +280,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton ConsulterBTN2;
     private javax.swing.JButton ModifierBTN;
     private javax.swing.JButton RechercherBTN;
+    private javax.swing.JButton RechercherBTN1;
     private javax.swing.JLabel UtilAutentifieTxt2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
