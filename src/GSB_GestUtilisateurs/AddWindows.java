@@ -281,7 +281,7 @@ public class AddWindows extends javax.swing.JFrame {
                 // Continue with the insertion using the generated ID
                 String nouveauPrenom = prenominput.getText();
                 String nouveauNom = nominput.getText();
-                String nouveauLogin = genererLogin(nouveauPrenom, nouveauNom);
+                String nouveauLogin = genererLoginUnique(nouveauPrenom, nouveauNom);
                 String nouveauCp = cpinput.getText();
                 String nouvelleVille = villeinput.getText();
                 String nouvelleDateEmbauche = dateembinput.getText();
@@ -311,6 +311,7 @@ public class AddWindows extends javax.swing.JFrame {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout de l'utilisateur.", "Erreur", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_AjouterBTNActionPerformed
 
@@ -363,7 +364,27 @@ private String genererMotDePasse() {
     return motDePasseAleatoire;
 }
 
+private String genererLoginUnique(String prenom, String nom) throws SQLException {
+    String baseLogin = prenom.substring(0,1).toLowerCase() + nom.toLowerCase().replaceAll("\\s", "_");
+    String login = baseLogin;
+    int suffix = 1;
     
+    String checkLoginQuery = "SELECT COUNT(*) FROM utilisateurs WHERE login = ?";
+    try (PreparedStatement checkStatement = conn.prepareStatement(checkLoginQuery)){
+        while (true) {
+            checkStatement.setString(1, login);
+            try (ResultSet rs = checkStatement.executeQuery()) {
+                if (rs.next() && rs.getInt(1) > 0) {
+                    login = baseLogin + suffix;
+                    suffix++;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+    return login;
+}
     
     /**
      * @param args the command line arguments
