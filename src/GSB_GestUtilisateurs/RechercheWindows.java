@@ -34,7 +34,7 @@ public class RechercheWindows extends javax.swing.JFrame {
 
     private void initializeConnection() {
         try {
-            String DB_URL = "jdbc:mysql://localhost/gsb_utilisateurs";
+            String DB_URL = "jdbc:mysql://localhost/gestutilisateur";
             String DB_USER = "root";
             String DB_PASSWORD = "";
             conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
@@ -156,7 +156,7 @@ public class RechercheWindows extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "id", "nom", "prénom", "login", "mdp", "adresse", "cp", "ville", "DateEmbauche"
+                "id", "nom", "prenom", "login", "mdp", "adresse", "cp", "ville", "DateEmbauche"
             }
         ) {
             Class[] types = new Class [] {

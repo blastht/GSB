@@ -122,7 +122,7 @@
                   <Table columnCount="9" rowCount="4">
                     <Column editable="true" title="id" type="java.lang.Integer"/>
                     <Column editable="true" title="nom" type="java.lang.String"/>
-                    <Column editable="true" title="pr&#xe9;nom" type="java.lang.String"/>
+                    <Column editable="true" title="prenom" type="java.lang.String"/>
                     <Column editable="true" title="login" type="java.lang.String"/>
                     <Column editable="true" title="mdp" type="java.lang.String"/>
                     <Column editable="true" title="adresse" type="java.lang.String"/>
