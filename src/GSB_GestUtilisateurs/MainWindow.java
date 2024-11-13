@@ -97,7 +97,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        RechercherBTN1.setText("Conn");
+        RechercherBTN1.setText("Connexion");
         RechercherBTN1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RechercherBTN1ActionPerformed(evt);
@@ -122,13 +122,13 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(ModifierBTN)
                         .addGap(18, 18, 18)
                         .addComponent(RechercherBTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(RechercherBTN1)
-                        .addGap(223, 223, 223))
+                        .addGap(307, 307, 307))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(332, 332, 332))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(RechercherBTN1)
+                        .addGap(347, 347, 347)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
@@ -144,11 +144,12 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(ConsulterBTN2)
                     .addComponent(AjouterBTN)
                     .addComponent(ModifierBTN)
-                    .addComponent(RechercherBTN)
+                    .addComponent(RechercherBTN))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
                     .addComponent(RechercherBTN1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
