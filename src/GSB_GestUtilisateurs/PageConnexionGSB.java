@@ -1,4 +1,4 @@
-package GSB_FRAIS;
+package GSB_GestUtilisateurs;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -9,6 +9,7 @@ package GSB_FRAIS;
  *
  * @author lrichier
  */
+import GSB_GestUtilisateurs.MainWindow;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,7 +18,7 @@ import javax.swing.JOptionPane;
 
 public class PageConnexionGSB extends javax.swing.JFrame {
 
-    private static final String DB_URL = "jdbc:mysql://localhost/gestutilisateur";
+    private static final String DB_URL = "jdbc:mysql://localhost/gsb_utilisateurs";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "";
 

@@ -1,4 +1,4 @@
-package GSB_FRAIS;
+package GSB_GestUtilisateurs;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -25,7 +25,7 @@ public class AddWindows extends javax.swing.JFrame {
 
     public AddWindows() throws SQLException {
         initComponents();
-        this.conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/gestutilisateur", "root", "");
+        this.conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/gsb_utilisateurs", "root", "");
     }
 
     /**

@@ -4,6 +4,7 @@ package GSB_GestUtilisateurs;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -41,6 +42,7 @@ public class MainWindow extends javax.swing.JFrame {
         AjouterBTN = new javax.swing.JButton();
         ConsulterBTN2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         UtilAutentifieTxt2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         UtilAutentifieTxt2.setText("Utilisateur authentifié");
@@ -86,6 +88,14 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GSB_GestUtilisateurs/gsblogo.png"))); // NOI18N
 
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton1.setText("Quitter");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -107,7 +117,10 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(321, 321, 321))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(332, 332, 332))))
+                        .addGap(332, 332, 332))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +135,9 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(AjouterBTN)
                     .addComponent(ModifierBTN)
                     .addComponent(RechercherBTN))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -185,6 +200,27 @@ public class MainWindow extends javax.swing.JFrame {
             // Fermez la fenêtre de connexion si nécessaire.
             this.dispose();    }//GEN-LAST:event_ConsulterBTN2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int choix = JOptionPane.showConfirmDialog(
+                this,
+                "Voulez-vous vraiment quitter ???.",
+                "Confirmation",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+        );
+        
+        if (choix == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(
+               this, 
+               "A bientôt !!!",
+               "Quitter",
+               JOptionPane.INFORMATION_MESSAGE
+            );
+            
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -226,6 +262,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton ModifierBTN;
     private javax.swing.JButton RechercherBTN;
     private javax.swing.JLabel UtilAutentifieTxt2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

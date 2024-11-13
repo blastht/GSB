@@ -1,4 +1,4 @@
-package GSB_FRAIS;
+package GSB_GestUtilisateurs;
 
 
 import java.sql.PreparedStatement;
