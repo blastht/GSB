@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 public class PageConnexionGSB extends javax.swing.JFrame {
 
-    private static final String DB_URL = "jdbc:mysql://localhost/gsb_utilisateurs";
+    private static final String DB_URL = "jdbc:mysql://localhost/gestutilisateur";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "";
 
