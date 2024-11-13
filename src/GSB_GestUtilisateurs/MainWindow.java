@@ -204,7 +204,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int choix = JOptionPane.showConfirmDialog(
                 this,
-                "Voulez-vous vraiment quitter ???.",
+                "Voulez-vous vraiment quitter l'application mobile???.",
                 "Confirmation",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE
