@@ -128,7 +128,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(332, 332, 332))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(RechercherBTN1)
-                        .addGap(347, 347, 347)
+                        .addGap(373, 373, 373)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
@@ -146,7 +146,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(ModifierBTN)
                     .addComponent(RechercherBTN))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(RechercherBTN1))
                 .addContainerGap(24, Short.MAX_VALUE))
