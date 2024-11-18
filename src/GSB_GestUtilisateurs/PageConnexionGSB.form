@@ -91,6 +91,8 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
                               <Component id="ConnexionBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="ConnexionBtn1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="62" max="32767" attributes="0"/>
@@ -111,7 +113,10 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="mdpinput" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="ConnexionBtn" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="ConnexionBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ConnexionBtn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace pref="78" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -171,6 +176,17 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConnexionBtnActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="ConnexionBtn1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Roboto" size="12" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Connexion"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConnexionBtn1ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

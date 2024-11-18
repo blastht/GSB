@@ -43,6 +43,7 @@ public class PageConnexionGSB extends javax.swing.JFrame {
         mdplabel = new javax.swing.JLabel();
         mdpinput = new javax.swing.JPasswordField();
         ConnexionBtn = new javax.swing.JButton();
+        ConnexionBtn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +78,14 @@ public class PageConnexionGSB extends javax.swing.JFrame {
             }
         });
 
+        ConnexionBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ConnexionBtn1.setText("Connexion");
+        ConnexionBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConnexionBtn1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -99,7 +108,9 @@ public class PageConnexionGSB extends javax.swing.JFrame {
                         .addComponent(mdplabel))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(153, 153, 153)
-                        .addComponent(ConnexionBtn)))
+                        .addComponent(ConnexionBtn)
+                        .addGap(33, 33, 33)
+                        .addComponent(ConnexionBtn1)))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -116,7 +127,9 @@ public class PageConnexionGSB extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(mdpinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
-                .addComponent(ConnexionBtn)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConnexionBtn)
+                    .addComponent(ConnexionBtn1))
                 .addContainerGap(78, Short.MAX_VALUE))
         );
 
@@ -190,6 +203,10 @@ public class PageConnexionGSB extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Erreur de connexion à la base de données : " + e.getMessage());
     }    }//GEN-LAST:event_ConnexionBtnActionPerformed
 
+    private void ConnexionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnexionBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConnexionBtn1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -227,6 +244,7 @@ public class PageConnexionGSB extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ConnexionBtn;
+    private javax.swing.JButton ConnexionBtn1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
