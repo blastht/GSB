@@ -52,7 +52,7 @@ public class PageConnexionGSB extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Condensed", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Page de connexion");
+        jLabel1.setText("     Page de connexion GSB    ");
 
         loginlabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         loginlabel.setText("Login :");
@@ -84,30 +84,30 @@ public class PageConnexionGSB extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(ConnexionBtn))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
+                        .addGap(55, 55, 55)
                         .addComponent(jLabel1))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
+                        .addGap(188, 188, 188)
                         .addComponent(loginlabel))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(logininput, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                            .addComponent(mdpinput)))
+                        .addGap(110, 110, 110)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(mdpinput, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(logininput, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(mdplabel)))
-                .addContainerGap(109, Short.MAX_VALUE))
+                        .addGap(164, 164, 164)
+                        .addComponent(mdplabel))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(ConnexionBtn)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(43, 43, 43)
+                .addGap(40, 40, 40)
                 .addComponent(loginlabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(logininput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -115,9 +115,9 @@ public class PageConnexionGSB extends javax.swing.JFrame {
                 .addComponent(mdplabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(mdpinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
                 .addComponent(ConnexionBtn)
-                .addGap(40, 40, 40))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -125,9 +125,9 @@ public class PageConnexionGSB extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
+                .addContainerGap(166, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(140, 140, 140))
+                .addGap(152, 152, 152))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,9 +156,14 @@ public class PageConnexionGSB extends javax.swing.JFrame {
         String login = logininput.getText();
         String password = new String(mdpinput.getPassword()); 
 
-        try {
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            String query = "SELECT * FROM Admin WHERE login = ? AND mdp = ?";
+        if(login.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Veuillez remplir tous les champs.", "Erreur Connexion", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        try (Connection conn = DatabaseConnection.getConnection()){
+            // Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            String query = "SELECT *  FROM Admin WHERE login = ? AND mdp = ?";
             PreparedStatement preparedStatement = conn.prepareStatement(query);
             preparedStatement.setString(1, login);
             preparedStatement.setString(2, password);
@@ -166,14 +171,18 @@ public class PageConnexionGSB extends javax.swing.JFrame {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                JOptionPane.showMessageDialog(null, "Connexion réussie !");
+                String nom = resultSet.getString("nom");
+                String prenom = resultSet.getString("prenom");
+                String userlogin = resultSet.getString("login");
+                String mdp = resultSet.getString("mdp");
+                
+                 JOptionPane.showMessageDialog(this, "Connexion réussie !", "Succès", JOptionPane.INFORMATION_MESSAGE);
 
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.setVisible(true);
-
+                ProfilPage profil = new ProfilPage(nom, prenom, userlogin, mdp);
+                profil.setVisible(true);
                 this.dispose();
             } else {
-                JOptionPane.showMessageDialog(null, "Identifiants incorrects. Veuillez réessayer.");
+                JOptionPane.showMessageDialog(null, "Identifiants ou mot de passe incorrects. Veuillez réessayer.");
             }
 
             conn.close();
