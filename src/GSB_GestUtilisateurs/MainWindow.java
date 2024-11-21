@@ -38,12 +38,10 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         ModifierBTN = new javax.swing.JButton();
-        RechercherBTN = new javax.swing.JButton();
         AjouterBTN = new javax.swing.JButton();
         ConsulterBTN2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        RechercherBTN1 = new javax.swing.JButton();
 
         UtilAutentifieTxt2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         UtilAutentifieTxt2.setText("Utilisateur authentifié");
@@ -63,13 +61,6 @@ public class MainWindow extends javax.swing.JFrame {
         ModifierBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModifierBTNActionPerformed(evt);
-            }
-        });
-
-        RechercherBTN.setText("Rechercher");
-        RechercherBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RechercherBTNActionPerformed(evt);
             }
         });
 
@@ -97,65 +88,47 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        RechercherBTN1.setText("Connexion");
-        RechercherBTN1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RechercherBTN1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
-                .addComponent(ConsulterBTN2)
-                .addGap(39, 39, 39)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(AjouterBTN)
-                        .addGap(64, 64, 64)
-                        .addComponent(ModifierBTN)
-                        .addGap(67, 67, 67)
-                        .addComponent(RechercherBTN)
-                        .addContainerGap())
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(346, 346, 346)))))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(378, 378, 378)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(433, 433, 433)
-                        .addComponent(RechercherBTN1)))
+                .addGap(378, 378, 378)
+                .addComponent(jLabel4)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AjouterBTN)
+                        .addGap(47, 47, 47)
+                        .addComponent(ModifierBTN))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addGap(341, 341, 341)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ConsulterBTN2)
+                            .addComponent(jLabel1))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsulterBTN2)
                     .addComponent(AjouterBTN)
-                    .addComponent(ModifierBTN)
-                    .addComponent(RechercherBTN))
-                .addGap(18, 18, 18)
-                .addComponent(RechercherBTN1)
-                .addContainerGap(27, Short.MAX_VALUE))
+                    .addComponent(ModifierBTN))
+                .addContainerGap(67, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -164,8 +137,7 @@ public class MainWindow extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,22 +158,36 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ModifierBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierBTNActionPerformed
-            RechercheWindows mainWindow = new RechercheWindows();
-            mainWindow.setVisible(true);
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int choix = JOptionPane.showConfirmDialog(
+            this,
+            "Voulez-vous vraiment quitter l'application mobile.",
+            "Confirmation",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE
+        );
 
-            // Fermez la fenêtre de connexion si nécessaire.
-            this.dispose();    }//GEN-LAST:event_ModifierBTNActionPerformed
+        if (choix == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(
+                this,
+                "A bientôt !!!",
+                "Quitter",
+                JOptionPane.INFORMATION_MESSAGE
+            );
 
-    private void RechercherBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RechercherBTNActionPerformed
-            RechercheWindows mainWindow = new RechercheWindows();
-            mainWindow.setVisible(true);
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-            // Fermez la fenêtre de connexion si nécessaire.
-            this.dispose();    }//GEN-LAST:event_RechercherBTNActionPerformed
+    private void ConsulterBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsulterBTN2ActionPerformed
+        RechercheWindows mainWindow = new RechercheWindows();
+        mainWindow.setVisible(true);
+
+        // Fermez la fenêtre de connexion si nécessaire.
+    }//GEN-LAST:event_ConsulterBTN2ActionPerformed
 
     private void AjouterBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjouterBTNActionPerformed
-            AddWindows mainWindow;
+        AddWindows mainWindow;
         try {
             mainWindow = new AddWindows();
             mainWindow.setVisible(true);
@@ -209,85 +195,24 @@ public class MainWindow extends javax.swing.JFrame {
             Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-            // Fermez la fenêtre de connexion si nécessaire.
-            this.dispose();    }//GEN-LAST:event_AjouterBTNActionPerformed
+        // Fermez la fenêtre de connexion si nécessaire.
+    }//GEN-LAST:event_AjouterBTNActionPerformed
 
-    private void ConsulterBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsulterBTN2ActionPerformed
-            RechercheWindows mainWindow = new RechercheWindows();
-            mainWindow.setVisible(true);
+    private void ModifierBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifierBTNActionPerformed
+        RechercheWindows mainWindow = new RechercheWindows();
+        mainWindow.setVisible(true);
 
-            // Fermez la fenêtre de connexion si nécessaire.
-            this.dispose();    }//GEN-LAST:event_ConsulterBTN2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int choix = JOptionPane.showConfirmDialog(
-                this,
-                "Voulez-vous vraiment quitter l'application mobile???.",
-                "Confirmation",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE
-        );
-        
-        if (choix == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(
-               this, 
-               "A bientôt !!!",
-               "Quitter",
-               JOptionPane.INFORMATION_MESSAGE
-            );
-            
-            System.exit(0);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void RechercherBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RechercherBTN1ActionPerformed
-        PageConnexionGSB connexion = new PageConnexionGSB();
-        connexion.setVisible(true);
-        // this.dispose();
-        
-    }//GEN-LAST:event_RechercherBTN1ActionPerformed
+        // Fermez la fenêtre de connexion si nécessaire.
+    }//GEN-LAST:event_ModifierBTNActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainWindow().setVisible(true);
-            }
-        });
-    }
-
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AjouterBTN;
     private javax.swing.JButton ConsulterBTN2;
     private javax.swing.JButton ModifierBTN;
-    private javax.swing.JButton RechercherBTN;
-    private javax.swing.JButton RechercherBTN1;
     private javax.swing.JLabel UtilAutentifieTxt2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
