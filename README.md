@@ -20,3 +20,13 @@ Une application Java pour la gestion des utilisateurs du GSB, avec des interface
 1. Clonez le dépôt :
    ```bash
    git clone https://github.com/<votre-utilisateur>/<votre-dépôt>.git
+
+---
+
+## **Étape 2 : Tester les chemins et ressources**
+Vérifiez que les ressources comme `gsblogo.png` ou le fichier SQL sont accessibles dans votre application. Voici comment gérer certains cas :
+
+1. **Accès aux images :**
+   Si votre logo est dans le dossier `src/GSB_GestUtilisateurs`, utilisez ce code pour le charger :
+   ```java
+   ImageIcon logo = new ImageIcon(getClass().getResource("/GSB_GestUtilisateurs/gsblogo.png"));
